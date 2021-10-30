@@ -2,6 +2,7 @@
 // import { getAuth, signOut } from "firebase/auth";
 
 // function SignOut(){
+
 // const auth = getAuth();
 // signOut(auth).then(() => {
 //   // Sign-out successful.
@@ -9,7 +10,7 @@
 //   // An error happened.
 // });
 //     return(
-//     <button className='btn' >Signout</button>
+//     <button className='btn' onClick={auth} >Signout</button>
 //     )
 // }
 

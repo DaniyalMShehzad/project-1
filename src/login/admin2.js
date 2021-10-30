@@ -1,5 +1,6 @@
 import React,{useState} from 'react'
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import Navbar from './navbar';
 function Admin2(){
 
 
@@ -32,7 +33,9 @@ createUserWithEmailAndPassword(auth, email, password)
 }
 return(
         <>
+        <Navbar/>
         <ul className="admin2" style={{listStyle:'none'}}>
+        <h1 style={{color:'wheat'}}>Adminsignup</h1>
         <li><input onChange={(e)=>setEmail(e.target.value)} type='email' className="login" placeholder="enter your email"/></li>
         <li><input onChange={(e)=>setPassword(e.target.value)}type='password' className="login" placeholder="password"/></li>
         <li><button onClick={admin2} className="btn">submit</button></li>

@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-function Admin(){
+import Navbar from './navbar';
+function Company2(){
 
 const [email,setEmail]=useState('')
 const [password,setpassword]=useState('')
@@ -9,7 +10,7 @@ console.log(email)
 // setName()
 // setEmail()
 
-const admin = (e) => {
+const Company2 = (e) => {
 
     e.preventDefault()
     // const auth = getAuth()
@@ -32,14 +33,14 @@ createUserWithEmailAndPassword(auth, email, password)
 }
     return(
     <>
-    <ul className="admin" style={{listStyle:'none'}}>
+    <ul className="company2" style={{listStyle:'none'}}>
   <li><input onChange={(e)=>setEmail(e.target.value)} type='email' className="login" placeholder="enter your email"/></li>
   <li><input onChange={(e)=>setpassword(e.target.value)}type='password' className="login" placeholder="Password"/></li>
-  <li><button onClick={admin} className="btn">submit</button></li>
+  <li><button onClick={Company2} className="btn">submit</button></li>
   </ul>
     </>
 
     )
 }
 
-export default Admin
+export default Company2

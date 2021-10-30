@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
-// import * as auth from 'firebase/auth'
+import {Link, useHistory } from "react-router-dom";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+// import Navbar from './navbar';
 function Signin() {
+    //    const history=useHistory() 
 
     const [password, setpassword] = useState('')
     const [email, setEmail] = useState('')
@@ -19,6 +21,7 @@ function Signin() {
                 // Signed in 
                 const user = userCredential.user;
                 console.log(user)
+                // history.push("/StudentData")
                 // ...
             })
             .catch((error) => {
@@ -29,9 +32,11 @@ function Signin() {
     }
     return (
         <>
+        {/* <Navbar/> */}
             <ul className="body" style={{ listStyle: 'none' }}>
+            <h1 style={{color:'wheat'}}>signin</h1>
                 <li><input onChange={(e) => setEmail(e.target.value)} type='text' className="login" placeholder="enter your email" /></li>
-                <li><input onChange={(e) => setpassword(e.target.value)} type='text' className="login" placeholder="password" /></li>
+                <li><input onChange={(e) => setpassword(e.target.value)} type="password" className="login" placeholder="password" /></li>
                 <li><button onClick={SignIn} className="btn">submit</button></li>
             </ul>
         </>
